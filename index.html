@@ -1,136 +1,159 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>UR HERE STORE </title>
-<style>
-  body {
-    margin: 0;
-    padding: 0;
-    font-family: "Cairo", sans-serif;
-  }
- .landing-page {
-    background-image: url('https://i.ibb.co/Zzm1Rrj/ea1dbb6ec40ef5e898bcc91e188c749b53939891-1000x667.jpg');
-    background-size: cover;
-    background-position: center;
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-  }
-  .logo {
-    width: 100px;
-    height: 100px;
-    border-radius: 50%;
-    overflow: hidden;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
-  }
-  .logo img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-  }
-  .sections {
-    text-align: center;
-    color: white;
-    max-width: 600px;
-    margin: 20px;
-  }
-  .hero-text {
-    font-size: 24px;
-    margin-bottom: 10px;
-    text-align: center;
-    font-family: cairo;
-    font-weight: bold;
-    color: #d52121;
-  }
-  .sub-text {
-    font-size: 16px;
-    text-align: center;
-    font-family: cairo;
-    font-weight: bold;
-    color: #ffffff;
-  }
-  .buttons-container {
-    display: flex;
-    flex-direction: column;
-    align-items: stretch;
-    width: 100%;
-    max-width: 400px;
-  }
-  .button {
-    padding: 10px;
-    background-color: #b51919;
-    color: rgb(236, 230, 230);
-    border: none;
-    cursor: pointer;
-    margin-bottom: 10px;
-    border-radius: 20px;
-    font-weight: bold;
-    font-family: "Cairo", sans-serif;
-    text-align: center;
-    transition: background-color 0.3s, color 0.3s;
-  }
-  .button:hover {
-    background-color: #000;
-    color: #d52121;
-  }
-  .footer {
-    background-color: #df0000;
-    color: rgb(0, 0, 0);
-    text-align: center;
-    padding: 20px 0;
-    font-weight: bold;
-    font-family: "Cairo", sans-serif;
-  }
-  footer a {
-    color: rgb(0, 0, 0); /* Set link color to black */
-    text-decoration: none;
-    margin: 0 10px;
-  }
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Professional Hero Image and Form</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Arial', sans-serif;
+        }
 
-</style>
-  
-<!-- Google Tag Manager -->
-<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-})(window,document,'script','dataLayer','GTM-KMG6JG35');</script>
-<!-- End Google Tag Manager -->
-  
+        .hero-section {
+            background-image: url('https://i.ibb.co/86wmmJZ/Paralegal-vs-Lawyer-jpeg.jpg'); /* Replace with the path to your hero image */
+            background-size: cover;
+            background-position: center;
+            color: #ffffff; /* Text color on top of the image */
+            text-align: center;
+            padding: 80px 20px; /* Adjust padding as needed */
+        }
+
+        .hero-text {
+            font-size: 3em;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+
+        .hero-section p {
+            font-size: 1.2em;
+        }
+
+        .form-section {
+            padding: 50px;
+            background-color: #f4f4f4; /* Background color for the form section */
+            text-align: center;
+        }
+
+        form {
+            max-width: 600px;
+            margin: auto;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 8px;
+            text-align: left;
+        }
+
+        input,
+        textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 20px;
+            box-sizing: border-box;
+        }
+
+        button {
+            background-color: #4caf50;
+            color: white;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .accept-email {
+            text-align: left;
+            margin-bottom: 20px;
+        }
+
+        /* Responsive Styles */
+        @media only screen and (max-width: 600px) {
+            .hero-text {
+                font-size: 2.5em;
+            }
+        }
+
+        /* Radio button styles */
+        .accept-email input[type="checkbox"] {
+            display: none; /* Hide the default checkbox */
+        }
+
+        .accept-email label {
+            position: relative;
+            padding-left: 30px; /* Space for the custom radio button */
+            cursor: pointer;
+            display: inline-block;
+            line-height: 20px;
+        }
+
+        .accept-email label:before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 20px;
+            height: 20px;
+            border: 2px solid #4caf50; /* Border color of the checkbox */
+            background-color: #ffffff; /* Background color when not checked */
+            border-radius: 4px; /* Rounded corners */
+            box-sizing: border-box;
+        }
+
+        .accept-email input[type="checkbox"]:checked + label:before {
+            background-color: #4caf50; /* Background color when checked */
+            border-color: #4caf50; /* Border color when checked */
+        }
+    </style>
 </head>
 <body>
-  <div class="landing-page">
-    <div class="logo">
-      <img src="https://i.ibb.co/RY12S3x/9yiu-Pm-Edc-BJop1-ZL71-F8-Ez-Gfl-Yp-R4d-JUW5f-L8jv4.jpg" alt="Logo">
-    </div>
-    <div class="sections">
-      <div class="hero-text">
-        <div dir="rtl">  اكتشف افضل العروض لدينا علي متجرنا 
-            URhere
+
+    <!-- Hero Image Section -->
+    <div class="hero-section">
+        <div class="hero-text">
+            BOOK YOUR FREE CONSULTANT 
         </div>
-      </div>
-     <div class="sub-text">
-        استمتع ب اليوتيوب بدون اعلانات باشتراك شهري او سنوي<br> علي متجرنا بارخص الاسعار
-              </div>
+        <p>Fill name and e-mail.</p>
     </div>
-   <div class="buttons-container">
-      <a class="button" href="https://urhere515.com/%D8%A7%D9%84%D8%B9%D8%B1%D9%88%D8%B6/c616054883" target="_blank">العروض</a>
-      <a class="button" href="https://urhere515.com/%D8%A7%D9%84%D8%B9%D8%B1%D9%88%D8%B6/c616054883" target="_blank">يوتيوب بريميوم</a>
-      <a class="button" href="https://urhere515.com/" target="_blank">   لينك المتجر </a> 
+
+    <!-- Form Section -->
+    <div class="form-section">
+        <h2>Fill out the form below</h2>
+        <form id="contact_form" action="https://script.google.com/macros/s/AKfycbzxH27WoFnBVEDKxxnoLMEdXyUQt5_i8i-Ac4naslaytM53geNE6Z4vbzIHAdOhoh6F9g/exec" method="post" enctype="multipart/form-data">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" rows="4" required></textarea>
+
+            <div class="accept-email">
+                <input type="checkbox" id="acceptEmail" name="acceptEmail" required>
+                <label for="acceptEmail">I accept ALL Trerms </label>
+            </div>
+
+            <button type="submit">Submit</button>
+        </form>
+        <script>
+          const scriptURL = 'https://script.google.com/macros/s/AKfycbzxH27WoFnBVEDKxxnoLMEdXyUQt5_i8i-Ac4naslaytM53geNE6Z4vbzIHAdOhoh6F9g/exec';
+          const form = document.getElementById('contact_form');
+      
+          form.addEventListener('submit', e => {
+            e.preventDefault();
+            fetch(scriptURL, { method: 'POST', body: new FormData(form) })
+              .then(response => {
+                // Redirect to the "Thank You" page after a successful form submission
+                window.location.href = 'thankyou.html';
+              })
+              .catch(error => console.error('Error!', error.message));
+          });
+        </script>
+      
     </div>
-  </div>
-  <footer class="footer">
-    &copy; 2023 جميع الحقوق محفوطة لدينا <br>
-    <a href="privcy.html" target="_blank">سياسة الخصوصية</a>
-    <a href="return.html" target="_blank">سياسة الاسترجاع</a>
-  </footer>
-  <!-- Google Tag Manager (noscript) -->
-<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KMG6JG35"
-height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-<!-- End Google Tag Manager (noscript) -->
+
 </body>
 </html>
